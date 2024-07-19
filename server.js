@@ -55,6 +55,6 @@ app.post('/query', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(port,"0.0.0.0", () => {
   console.log(`Server running at http://0.0.0.0:${port}`);
 });
