@@ -10,7 +10,9 @@ app.use(cors());
 app.use(express.json());
 
 const fetcher = new SparqlEndpointFetcher();
-
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to the SPARQL endpoint API!' });
+});
 app.post('/query', async (req, res) => {
   const { query } = req.body;
   const queryString = `
